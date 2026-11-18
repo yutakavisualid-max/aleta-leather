@@ -1,0 +1,489 @@
+<!DOCTYPE html>
+<html lang="id" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ALETA LEATHER — Handcrafted Genuine Leather Goods</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;0,700;1,500&family=Plus+Jakarta+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        serif: ['"Cormorant Garamond"', 'serif'],
+                        sans: ['"Plus Jakarta Sans"', 'sans-serif'],
+                    },
+                    colors: {
+                        aleta: {
+                            cream: '#FAF8F5',
+                            sand: '#F2ECE4',
+                            espresso: '#1E1916',
+                            brown: '#3E2F26',
+                            gold: '#C5A059',
+                            goldHover: '#B08D48',
+                            muted: '#786E68'
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        @keyframes pulseGlow {
+            0%, 100% { opacity: 1; transform: scale(1); }
+            50% { opacity: 0.4; transform: scale(1.25); }
+        }
+        .flash-lamp {
+            animation: pulseGlow 2s infinite ease-in-out;
+        }
+        .glass-nav {
+            background: rgba(250, 248, 245, 0.88);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+        }
+    </style>
+</head>
+<body class="bg-aleta-cream text-aleta-espresso font-sans antialiased selection:bg-aleta-gold selection:text-white">
+
+    <!-- NAVBAR -->
+    <nav class="fixed top-0 w-full z-40 glass-nav border-b border-stone-200/70 transition-all">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
+            <!-- Brand Logo & Live Status -->
+            <div class="flex items-center gap-4">
+                <a href="#" class="font-serif text-3xl sm:text-4xl font-bold tracking-wider text-aleta-espresso lowercase">
+                    aleta<span class="text-aleta-gold">.</span>
+                </a>
+                <div class="hidden sm:flex items-center gap-2 px-3 py-1 rounded-full bg-aleta-sand border border-stone-200/80 text-xs font-medium text-aleta-brown">
+                    <span class="w-2 h-2 rounded-full bg-emerald-500 flash-lamp"></span>
+                    <span id="nav-status-text">Showroom Buka</span>
+                </div>
+            </div>
+
+            <!-- Menu Links -->
+            <div class="hidden md:flex items-center gap-8 text-sm font-medium text-aleta-brown">
+                <a href="#koleksi" class="hover:text-aleta-gold transition">Koleksi Eksklusif</a>
+                <a href="#keunggulan" class="hover:text-aleta-gold transition">Material & Kualitas</a>
+                <a href="#showroom" class="hover:text-aleta-gold transition">Galeri Showroom</a>
+            </div>
+
+            <!-- CTA Button -->
+            <div class="flex items-center gap-3">
+                <a id="nav-wa-btn" href="#" target="_blank" class="px-5 py-2.5 rounded-full bg-aleta-espresso text-aleta-cream text-xs sm:text-sm font-medium hover:bg-aleta-brown transition shadow-sm flex items-center gap-2">
+                    <span>Konsultasi & Grosir</span>
+                    <svg class="w-4 h-4 text-aleta-gold" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path></svg>
+                </a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- HERO SECTION -->
+    <section class="pt-32 pb-20 lg:pt-40 lg:pb-28 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto">
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+            <div class="lg:col-span-6 space-y-6">
+                <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-aleta-sand text-aleta-brown text-xs font-semibold tracking-widest uppercase">
+                    <span class="text-aleta-gold">✦</span> 100% Genuine Handcrafted Leather
+                </div>
+                <h1 class="font-serif text-4xl sm:text-5xl lg:text-6xl font-semibold leading-[1.12] text-aleta-espresso">
+                    Keanggunan Abadi dalam Setiap Jahitan Kulit Asli.
+                </h1>
+                <p id="hero-desc" class="text-aleta-muted text-base sm:text-lg leading-relaxed max-w-xl">
+                    Diproduksi langsung oleh pengrajin ahli dengan seleksi kulit sapi terbaik. Menghadirkan tas, dompet, dan aksesoris berkarakter mewah yang semakin berkelas seiring waktu.
+                </p>
+                <div class="pt-2 flex flex-wrap items-center gap-4">
+                    <a href="#koleksi" class="px-7 py-3.5 rounded-full bg-aleta-espresso text-white text-sm font-medium hover:bg-aleta-brown transition shadow-md">
+                        Jelajahi Katalog
+                    </a>
+                    <a href="#showroom" class="px-7 py-3.5 rounded-full border border-stone-300 text-aleta-espresso text-sm font-medium hover:border-aleta-espresso transition">
+                        Kunjungi Showroom
+                    </a>
+                </div>
+                <!-- Trust Badges -->
+                <div class="pt-6 grid grid-cols-3 gap-4 border-t border-stone-200/80 max-w-lg">
+                    <div>
+                        <p class="font-serif text-2xl font-bold text-aleta-espresso">100%</p>
+                        <p class="text-xs text-aleta-muted">Kulit Sapi Asli</p>
+                    </div>
+                    <div>
+                        <p class="font-serif text-2xl font-bold text-aleta-espresso">Handcrafted</p>
+                        <p class="text-xs text-aleta-muted">Jahitan Presisi</p>
+                    </div>
+                    <div>
+                        <p class="font-serif text-2xl font-bold text-aleta-espresso">Custom</p>
+                        <p class="text-xs text-aleta-muted">Grafir Nama & Logo</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Hero Visual Frame -->
+            <div class="lg:col-span-6 relative">
+                <div class="aspect-[4/5] sm:aspect-[4/3] lg:aspect-[4/5] rounded-3xl overflow-hidden shadow-2xl bg-aleta-sand relative group">
+                    <img id="hero-image" src="" alt="Aleta Leather Showroom & Collection" class="w-full h-full object-cover object-center group-hover:scale-105 transition duration-700">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/50 via-transparent to-transparent"></div>
+                    <div class="absolute bottom-6 left-6 right-6 p-5 rounded-2xl bg-white/90 backdrop-blur-md border border-white/40 flex items-center justify-between">
+                        <div>
+                            <p class="text-xs uppercase tracking-widest text-aleta-gold font-semibold">Signature Collection</p>
+                            <p class="font-serif text-lg font-bold text-aleta-espresso">Aleta Hobo & Tote Series</p>
+                        </div>
+                        <span class="px-3 py-1 rounded-full bg-aleta-espresso text-white text-xs">Direct Produsen</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- KEUNGGULAN BRAND -->
+    <section id="keunggulan" class="py-16 bg-aleta-sand/70 border-y border-stone-200/60">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div class="p-6 rounded-2xl bg-aleta-cream border border-stone-200/60">
+                    <div class="w-10 h-10 rounded-full bg-aleta-espresso text-aleta-gold flex items-center justify-center font-serif text-xl mb-4">01</div>
+                    <h3 class="font-serif text-2xl font-semibold mb-2">Kulit Pilihan Grade A</h3>
+                    <p class="text-sm text-aleta-muted leading-relaxed">Menggunakan kulit sapi asli pilihan (*full-grain & pull-up*) yang lembut, tahan lama, dan tidak akan mengelupas.</p>
+                </div>
+                <div class="p-6 rounded-2xl bg-aleta-cream border border-stone-200/60">
+                    <div class="w-10 h-10 rounded-full bg-aleta-espresso text-aleta-gold flex items-center justify-center font-serif text-xl mb-4">02</div>
+                    <h3 class="font-serif text-2xl font-semibold mb-2">Harga Langsung Pengrajin</h3>
+                    <p class="text-sm text-aleta-muted leading-relaxed">Sebagai produsen langsung, Anda mendapatkan kualitas butik mewah dengan harga yang jauh lebih rasional.</p>
+                </div>
+                <div class="p-6 rounded-2xl bg-aleta-cream border border-stone-200/60">
+                    <div class="w-10 h-10 rounded-full bg-aleta-espresso text-aleta-gold flex items-center justify-center font-serif text-xl mb-4">03</div>
+                    <h3 class="font-serif text-2xl font-semibold mb-2">Terima Pesanan Custom & Corporate</h3>
+                    <p class="text-sm text-aleta-muted leading-relaxed">Melayani pembuatan souvenir eksklusif kantor, seminar, maupun *re-branding* dengan emboss logo sendiri.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- KATALOG PRODUK INTERAKTIF -->
+    <section id="koleksi" class="py-24 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto">
+        <div class="flex flex-col md:flex-row md:items-end justify-between mb-12 gap-6">
+            <div>
+                <p class="text-xs uppercase tracking-widest text-aleta-gold font-semibold mb-2">Kurasi Karya Terbaik</p>
+                <h2 class="font-serif text-3xl sm:text-5xl font-semibold text-aleta-espresso">Koleksi Pilihan Aleta</h2>
+            </div>
+
+            <!-- Filter Buttons -->
+            <div id="category-filters" class="flex flex-wrap gap-2">
+                <button onclick="filterProducts('Semua')" class="filter-btn active px-5 py-2 rounded-full text-xs sm:text-sm font-medium bg-aleta-espresso text-white transition">Semua</button>
+                <button onclick="filterProducts('Tas Wanita')" class="filter-btn px-5 py-2 rounded-full text-xs sm:text-sm font-medium bg-aleta-sand text-aleta-brown hover:bg-stone-200 transition">Tas Wanita</button>
+                <button onclick="filterProducts('Dompet & Clutch')" class="filter-btn px-5 py-2 rounded-full text-xs sm:text-sm font-medium bg-aleta-sand text-aleta-brown hover:bg-stone-200 transition">Dompet & Clutch</button>
+                <button onclick="filterProducts('Aksesoris & Sabuk')" class="filter-btn px-5 py-2 rounded-full text-xs sm:text-sm font-medium bg-aleta-sand text-aleta-brown hover:bg-stone-200 transition">Aksesoris & Sabuk</button>
+            </div>
+        </div>
+
+        <!-- Product Grid -->
+        <div id="product-grid" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+            <!-- Di-render otomatis oleh JavaScript -->
+        </div>
+    </section>
+
+    <!-- SHOWROOM GALLERY SECTION -->
+    <section id="showroom" class="py-20 bg-aleta-espresso text-aleta-cream">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+                <div class="lg:col-span-5 space-y-6">
+                    <p class="text-xs uppercase tracking-widest text-aleta-gold font-semibold">Showroom & Galeri Fisik</p>
+                    <h2 class="font-serif text-3xl sm:text-5xl font-semibold leading-tight">
+                        Rasakan Langsung Tekstur & Aroma Kulit Asli Kami.
+                    </h2>
+                    <p class="text-stone-300 text-sm sm:text-base leading-relaxed">
+                        Kunjungi galeri resmi <span class="text-white font-medium">Aleta Leather</span> untuk melihat ratusan koleksi ready stock, memilih jenis tekstur kulit, hingga berkonsultasi langsung untuk pesanan khusus.
+                    </p>
+                    <div class="p-5 rounded-2xl bg-white/5 border border-white/10 space-y-2">
+                        <p class="text-xs text-aleta-gold uppercase tracking-wider font-semibold">Alamat Showroom</p>
+                        <p id="showroom-address" class="text-sm text-stone-200">Showroom Utama Aleta Leather — Indonesia</p>
+                        <p class="text-xs text-stone-400">Buka Setiap Hari: 09.00 – 20.00 WIB</p>
+                    </div>
+                    <div class="pt-2">
+                        <a id="showroom-wa-btn" href="#" target="_blank" class="inline-flex items-center gap-2 px-6 py-3 rounded-full bg-aleta-gold text-aleta-espresso text-sm font-semibold hover:bg-aleta-goldHover transition">
+                            <span>Buat Janji Kunjungan / Shareloc</span>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="lg:col-span-7 grid grid-cols-2 gap-4">
+                    <div class="rounded-2xl overflow-hidden aspect-[4/3] bg-stone-800">
+                        <img id="gallery-1" src="" alt="Interior Showroom Aleta" class="w-full h-full object-cover hover:scale-105 transition duration-500">
+                    </div>
+                    <div class="rounded-2xl overflow-hidden aspect-[4/3] bg-stone-800">
+                        <img id="gallery-2" src="" alt="Display Koleksi Tas Aleta" class="w-full h-full object-cover hover:scale-105 transition duration-500">
+                    </div>
+                    <div class="col-span-2 rounded-2xl overflow-hidden aspect-[16/8] bg-stone-800">
+                        <img id="gallery-3" src="" alt="Showroom Panorama Aleta" class="w-full h-full object-cover hover:scale-105 transition duration-500">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="py-12 bg-aleta-cream border-t border-stone-200 text-center sm:text-left">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col sm:flex-row items-center justify-between gap-4">
+            <div>
+                <span class="font-serif text-2xl font-bold text-aleta-espresso lowercase">aleta<span class="text-aleta-gold">.</span></span>
+                <p class="text-xs text-aleta-muted mt-1">© 2026 Aleta Leather Craft. Handcrafted Genuine Leather Goods.</p>
+            </div>
+            <div class="text-xs text-aleta-muted">
+                Digital Showcase by <span class="font-semibold text-aleta-espresso">Yutaka Visual</span>
+            </div>
+        </div>
+    </footer>
+
+    <!-- FLOATING CHATBOT WIDGET (AUTO-RESET ON CLOSE) -->
+    <div class="fixed bottom-6 right-6 z-50">
+        <!-- Chat Window -->
+        <div id="chat-window" class="hidden mb-4 w-80 sm:w-96 rounded-2xl bg-white shadow-2xl border border-stone-200 overflow-hidden transition-all">
+            <div class="bg-aleta-espresso text-white p-4 flex items-center justify-between">
+                <div class="flex items-center gap-2.5">
+                    <span class="w-2.5 h-2.5 rounded-full bg-emerald-400 flash-lamp"></span>
+                    <div>
+                        <p class="font-serif text-lg font-semibold leading-none">Aleta Concierge</p>
+                        <p class="text-[11px] text-stone-300 mt-0.5">Asisten Virtual 24 Jam</p>
+                    </div>
+                </div>
+                <button onclick="toggleChat()" class="text-stone-300 hover:text-white p-1" title="Tutup & Reset Chat">
+                    <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path></svg>
+                </button>
+            </div>
+
+            <div id="chat-messages" class="p-4 h-64 overflow-y-auto space-y-3 bg-aleta-cream/50 text-xs sm:text-sm">
+                <!-- Pesan awal diisi otomatis oleh JS -->
+            </div>
+
+            <!-- Quick Questions -->
+            <div class="px-3 py-2 bg-aleta-sand/50 border-t border-stone-200/70 flex flex-wrap gap-1.5">
+                <button onclick="sendQuickReply('Apakah ini kulit sapi asli?')" class="px-2.5 py-1 rounded-full bg-white border border-stone-200 text-[11px] text-aleta-brown hover:border-aleta-gold">Kulit asli?</button>
+                <button onclick="sendQuickReply('Bisa custom grafir nama / logo?')" class="px-2.5 py-1 rounded-full bg-white border border-stone-200 text-[11px] text-aleta-brown hover:border-aleta-gold">Custom grafir?</button>
+                <button onclick="sendQuickReply('Info harga grosir / reseller')" class="px-2.5 py-1 rounded-full bg-white border border-stone-200 text-[11px] text-aleta-brown hover:border-aleta-gold">Harga grosir</button>
+            </div>
+
+            <form onsubmit="handleChatSubmit(event)" class="p-3 bg-white border-t border-stone-200 flex gap-2">
+                <input id="chat-input" type="text" placeholder="Tulis pertanyaan Anda..." class="flex-1 text-xs sm:text-sm px-3 py-2 rounded-full bg-aleta-cream border border-stone-200 focus:outline-none focus:border-aleta-gold">
+                <button type="submit" class="px-4 py-2 rounded-full bg-aleta-espresso text-white text-xs font-medium hover:bg-aleta-brown">Kirim</button>
+            </form>
+        </div>
+
+        <!-- Chat Toggle Button -->
+        <button onclick="toggleChat()" class="ml-auto flex items-center gap-2.5 px-5 py-3.5 rounded-full bg-aleta-espresso text-white shadow-xl hover:bg-aleta-brown transition border border-aleta-gold/40">
+            <span class="w-2 h-2 rounded-full bg-emerald-400 flash-lamp"></span>
+            <span class="text-xs sm:text-sm font-medium">Tanya Aleta</span>
+        </button>
+    </div>
+
+    <!-- CENTRALIZED SITE CONFIGURATION -->
+    <script>
+        const SITE_CONFIG = {
+            brandName: "Aleta Leather",
+            whatsappNumber: "6281234567890", // Ganti dengan nomor WA Aleta Leather
+            address: "Showroom & Workshop Aleta Leather (Klik untuk Google Maps)",
+            
+            // ASET FOTO LOKAL (Simpan foto asli Aleta ke dalam folder 'images/')
+            images: {
+                hero: "images/hero-tas.jpg",        // Foto rak tas hobo warna earth-tone
+                gallery1: "images/showroom-1.jpg", // Foto interior showroom logo emas Aleta
+                gallery2: "images/showroom-2.jpg", // Foto display rak lampu hangat
+                gallery3: "images/showroom-3.jpg"  // Foto panorama showroom luas
+            },
+
+            // KATALOG PRODUK ALETA LEATHER
+            products: [
+                {
+                    id: 1,
+                    name: "Aleta Luna Hobo Bag",
+                    category: "Tas Wanita",
+                    price: "Rp 485.000",
+                    tag: "Best Seller",
+                    image: "images/produk-hobo.jpg",
+                    desc: "Tas bahu kulit sapi tekstur jeruk lembut dengan siluet melengkung elegan. Tersedia pilihan warna Taupe, Maroon, Hitam, dan Tan."
+                },
+                {
+                    id: 2,
+                    name: "Aleta Heritage Satchel Bag",
+                    category: "Tas Wanita",
+                    price: "Rp 550.000",
+                    tag: "Signature",
+                    image: "images/produk-satchel.jpg",
+                    desc: "Handbag berstruktur kokoh dengan finishing kulit semi-gloss mewah. Cocok untuk aktivitas kerja maupun acara formal."
+                },
+                {
+                    id: 3,
+                    name: "Aleta Zip-Around Long Wallet",
+                    category: "Dompet & Clutch",
+                    price: "Rp 225.000",
+                    tag: "Ready Stock",
+                    image: "images/produk-dompet.jpg",
+                    desc: "Dompet panjang kulit asli dengan kompartemen kartu lengkap dan resleting logam premium anti-macet."
+                },
+                {
+                    id: 4,
+                    name: "Aleta Ecoprint Leather Edition",
+                    category: "Dompet & Clutch",
+                    price: "Rp 265.000",
+                    tag: "Limited Art",
+                    image: "images/produk-ecoprint.jpg",
+                    desc: "Perpaduan kulit asli dengan motif daun ecoprint alami yang unik—setiap produk memiliki corak eksklusif satu-satunya."
+                },
+                {
+                    id: 5,
+                    name: "Aleta Classic Genuine Belt",
+                    category: "Aksesoris & Sabuk",
+                    price: "Rp 185.000",
+                    tag: "Favorit Pria & Wanita",
+                    image: "images/produk-sabuk.jpg",
+                    desc: "Ikat pinggang kulit sapi selapis utuh (*one-piece leather*) yang lentur, kuat, dan tahan pemakaian bertahun-tahun."
+                },
+                {
+                    id: 6,
+                    name: "Aleta Minimalist Clutch & Pouch",
+                    category: "Dompet & Clutch",
+                    price: "Rp 295.000",
+                    tag: "Custom Gift",
+                    image: "images/produk-clutch.jpg",
+                    desc: "Clutch kulit berdesain ramping dengan emboss logo Aleta. Sangat ideal untuk hadiah eksklusif maupun souvenir VIP."
+                }
+            ]
+        };
+
+        // INISIALISASI KONTEN & GAMBAR
+        document.addEventListener("DOMContentLoaded", () => {
+            const waBase = `https://wa.me/${SITE_CONFIG.whatsappNumber}?text=`;
+            document.getElementById("nav-wa-btn").href = waBase + encodeURIComponent("Halo Aleta Leather, saya tertarik melihat katalog lengkap dan konsultasi produk.");
+            document.getElementById("showroom-wa-btn").href = waBase + encodeURIComponent("Halo Aleta Leather, boleh minta shareloc lokasi showroom-nya?");
+            document.getElementById("showroom-address").textContent = SITE_CONFIG.address;
+
+            // Set gambar utama & galeri (dengan fallback elegan jika file lokal belum dimasukkan)
+            setImgWithFallback("hero-image", SITE_CONFIG.images.hero, "https://images.unsplash.com/photo-1584917865442-de89df76afd3?auto=format&fit=crop&w=900&q=80");
+            setImgWithFallback("gallery-1", SITE_CONFIG.images.gallery1, "https://images.unsplash.com/photo-1441986300917-64674bd600d8?auto=format&fit=crop&w=800&q=80");
+            setImgWithFallback("gallery-2", SITE_CONFIG.images.gallery2, "https://images.unsplash.com/photo-1590874103328-eac38a683ce7?auto=format&fit=crop&w=800&q=80");
+            setImgWithFallback("gallery-3", SITE_CONFIG.images.gallery3, "https://images.unsplash.com/photo-1556905055-8f358a7a47b2?auto=format&fit=crop&w=1200&q=80");
+
+            renderProducts("Semua");
+            resetChat();
+        });
+
+        function setImgWithFallback(elementId, localPath, fallbackUrl) {
+            const img = document.getElementById(elementId);
+            img.src = localPath;
+            img.onerror = () => { img.src = fallbackUrl; };
+        }
+
+        // RENDER KATALOG PRODUK
+        function renderProducts(selectedCategory) {
+            const grid = document.getElementById("product-grid");
+            grid.innerHTML = "";
+
+            const filtered = selectedCategory === "Semua"
+                ? SITE_CONFIG.products
+                : SITE_CONFIG.products.filter(p => p.category === selectedCategory);
+
+            filtered.forEach(item => {
+                const waText = encodeURIComponent(`Halo Aleta Leather, saya ingin memesan / menanyakan stok untuk:\n\n*${item.name}* (${item.price})\n\nMohon info pilihan warnanya ya.`);
+                const card = `
+                    <div class="group rounded-3xl bg-white border border-stone-200/80 overflow-hidden shadow-sm hover:shadow-xl transition duration-300 flex flex-col justify-between">
+                        <div>
+                            <div class="aspect-[4/3] bg-aleta-sand relative overflow-hidden">
+                                <img src="${item.image}" alt="${item.name}" onerror="this.src='https://images.unsplash.com/photo-1548036328-c9fa89d128fa?auto=format&fit=crop&w=600&q=80'" class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
+                                <span class="absolute top-4 left-4 px-3 py-1 rounded-full bg-white/95 backdrop-blur-sm text-[11px] font-semibold text-aleta-espresso shadow-sm">
+                                    ${item.tag}
+                                </span>
+                            </div>
+                            <div class="p-6">
+                                <p class="text-[11px] uppercase tracking-widest text-aleta-gold font-semibold mb-1">${item.category}</p>
+                                <h3 class="font-serif text-2xl font-bold text-aleta-espresso mb-2">${item.name}</h3>
+                                <p class="text-xs sm:text-sm text-aleta-muted leading-relaxed">${item.desc}</p>
+                            </div>
+                        </div>
+                        <div class="px-6 pb-6 pt-4 border-t border-stone-100 flex items-center justify-between">
+                            <div>
+                                <p class="text-[10px] text-aleta-muted uppercase">Harga Produsen</p>
+                                <p class="font-semibold text-base sm:text-lg text-aleta-espresso">${item.price}</p>
+                            </div>
+                            <a href="https://wa.me/${SITE_CONFIG.whatsappNumber}?text=${waText}" target="_blank" class="px-4 py-2.5 rounded-full bg-aleta-espresso text-white text-xs font-medium hover:bg-aleta-gold hover:text-aleta-espresso transition">
+                                Pesan via WA
+                            </a>
+                        </div>
+                    </div>
+                `;
+                grid.innerHTML += card;
+            });
+        }
+
+        function filterProducts(category) {
+            document.querySelectorAll(".filter-btn").forEach(btn => {
+                if (btn.textContent === category) {
+                    btn.classList.remove("bg-aleta-sand", "text-aleta-brown");
+                    btn.classList.add("bg-aleta-espresso", "text-white");
+                } else {
+                    btn.classList.remove("bg-aleta-espresso", "text-white");
+                    btn.classList.add("bg-aleta-sand", "text-aleta-brown");
+                }
+            });
+            renderProducts(category);
+        }
+
+        // LOGIKA CHATBOT AUTO-RESET SAAT DITUTUP
+        let isChatOpen = false;
+        function toggleChat() {
+            const chatWindow = document.getElementById("chat-window");
+            isChatOpen = !isChatOpen;
+            if (isChatOpen) {
+                chatWindow.classList.remove("hidden");
+            } else {
+                chatWindow.classList.add("hidden");
+                resetChat(); // Otomatis membersihkan riwayat percakapan saat ditutup
+            }
+        }
+
+        function resetChat() {
+            const box = document.getElementById("chat-messages");
+            box.innerHTML = `
+                <div class="p-3 rounded-2xl rounded-tl-none bg-white border border-stone-200 text-aleta-espresso shadow-sm">
+                    Selamat datang di <strong>Aleta Leather</strong>. Ada yang bisa kami bantu seputar koleksi tas, dompet kulit asli, atau pesanan custom?
+                </div>
+            `;
+        }
+
+        function appendMessage(text, isUser = false) {
+            const box = document.getElementById("chat-messages");
+            const msgDiv = document.createElement("div");
+            msgDiv.className = isUser
+                ? "ml-auto max-w-[85%] p-3 rounded-2xl rounded-tr-none bg-aleta-espresso text-white"
+                : "max-w-[85%] p-3 rounded-2xl rounded-tl-none bg-white border border-stone-200 text-aleta-espresso shadow-sm";
+            msgDiv.innerHTML = text;
+            box.appendChild(msgDiv);
+            box.scrollTop = box.scrollHeight;
+        }
+
+        function getBotReply(input) {
+            const q = input.toLowerCase();
+            if (q.includes("asli") || q.includes("kulit")) {
+                return "100% kulit sapi asli pilihan, Kak! Teksturnya lembut, awet bertahun-tahun, dan bergaransi keaslian material.";
+            } else if (q.includes("custom") || q.includes("grafir") || q.includes("logo")) {
+                return "Bisa banget! Kami melayani custom emboss/grafir nama satuan maupun logo perusahaan untuk souvenir eksklusif.";
+            } else if (q.includes("grosir") || q.includes("reseller")) {
+                return "Karena kami produsen langsung, tersedia harga khusus grosir & reseller. Silakan klik tombol 'Konsultasi & Grosir' di atas untuk katalog harga mitra ya!";
+            } else {
+                return "Terima kasih pertanyaannya! Untuk cek ketersediaan warna real-time, langsung terhubung dengan admin showroom kami via WhatsApp ya Kak.";
+            }
+        }
+
+        function sendQuickReply(text) {
+            appendMessage(text, true);
+            setTimeout(() => appendMessage(getBotReply(text), false), 450);
+        }
+
+        function handleChatSubmit(e) {
+            e.preventDefault();
+            const input = document.getElementById("chat-input");
+            const val = input.value.trim();
+            if (!val) return;
+            appendMessage(val, true);
+            input.value = "";
+            setTimeout(() => appendMessage(getBotReply(val), false), 450);
+        }
+    </script>
+</body>
+</html>
